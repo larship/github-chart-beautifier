@@ -18,6 +18,7 @@ if (empty($conf['chart'])) {
 $daysCount = count($conf['chart']) * count($conf['chart'][0]);
 $timeZone = new DateTimeZone('UTC');
 $currentDate = new DateTime($conf['startDate'], $timeZone);
+$dateTimeStr = $currentDate->format(DateTime::RFC2822);
 
 for ($i = 0; $i < $daysCount; $i++) {
     $count = $conf['chart'][$i % 7][(int) ($i / 7)];
