@@ -40,4 +40,5 @@ COMMAND
     echo $dateTimeStr . ' done with ' . $count . ' commits' . PHP_EOL;
 
     $currentDate->add(new DateInterval('P1D'));
+    $dateTimeStr = $currentDate->format(DateTime::RFC2822);
 }
